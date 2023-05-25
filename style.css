@@ -1,27 +1,27 @@
 body {
-    background-color: #131316;
-    color: #ffffff;
     font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
 }
 
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
-.hidden {
+.card {
+    background: white;
+    border: 1px solid black;
+    border-radius: .25rem;
+    padding: .5rem;
+    transform: translateX(100px);
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
+    transition: 150ms;
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
+.card.show {
     transform: translateX(0);
+    opacity: 1;
 }
